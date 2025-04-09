@@ -49,3 +49,268 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+
+input {
+  outline: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 30px;
+  min-width: 1140px;
+  min-height: 534px;
+  max-height: 1140px;
+}
+
+
+.result {
+  min-width: 711px;
+}
+
+.search-form {
+  padding-top: 16px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-end
+}
+
+.content__details {
+  width: 399px;
+  height: 100%;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-container {
+  position: relative;
+  margin-top: 22px;
+  height: 298px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+}
+
+.result__video {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+.title {
+  font-family: Oswald;
+  font-weight: bold;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  width: 259px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.button {
+  background-color: transparent;
+  box-shadow: 0 0 0 1px white;
+}
+
+.search-form__fieldset {
+  border: 0 none;
+}
+
+
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: normal;
+  padding-bottom: 5px;
+}
+
+.search-form__textfield {
+  border: none;
+  height: 27px;
+  width: 225px;
+  background-color: transparent;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__submit-button {
+  border: none;
+  width: 194px;
+  height: 34px;
+  color: white;
+  font-family: 'Fira Sans Condensed';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  outline: 1px solid white;
+  width: 17px;
+  height: 17px;
+  margin-right: 6px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  position: relative;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 17px;
+  width: 212px;
+  padding: 0 0 5px 0;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+
+.content__video-card-thumbnail {
+  width: 198px;
+  height: 103px;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__video-card-title,
+.content__video-card-description {
+  color: white;
+}
+
+.content__video-card-description-container {
+  max-width: 200px;
+  padding: 2px;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed';
+  line-height: 150%;
+}
+
+.more-button {
+  border: none;
+  width: 99%;
+  height: 34px;
+  color: white;
+  font-family: 'Fira Sans Condensed';
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 1px;
+}
+
+.search-form__textfield:active {
+  border: 1px solid white;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 2px;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__list-item:hover {
+  cursor: pointer;
+}
+
+.content__list-item:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.search-form__label:hover {
+  cursor: pointer;
+}
+
+/* .search-form__label:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 3px;
+} */
+
+/* focus-visible не работал для данного элемента */
+.search-form__label:focus-within { 
+  outline: 1px solid white;
+  outline-offset: 2px;
+}

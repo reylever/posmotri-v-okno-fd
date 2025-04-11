@@ -312,7 +312,7 @@ input {
 
 
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   cursor: pointer;
   text-decoration: underline;
 }
